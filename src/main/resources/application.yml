@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: springsecurityoauth2
+  datasource:
+    url: jdbc:mysql://http:localhost:3306/oauth2springsecurity
+    username: root
+    password: root
+  jpa:
+    showSql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientName: google
+            clientId: <clientid>
+            clientSecret: <clientSecret>
+            scope:
+              - openid
+              - profile
+              - email
